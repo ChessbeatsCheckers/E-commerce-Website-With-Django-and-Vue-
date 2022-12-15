@@ -6,14 +6,14 @@
       <div class="navbar-brand">
         <router-link to="/" class="navbar-item"><strong>SS Tech</strong></router-link>
 
-        <a class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
+        <a class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu" @click="showMobileMenu = !showMobileMenu">
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
         </a>
       </div>
 
-      <div class="navbar-menu" id="navbar-menu">
+      <div class="navbar-menu" id="navbar-menu" v-bind:class="{'is-active': showMobileMenu}">
         <div class="navbar-end">
           <router-link to="/computers" class="navbar-item">Computer</router-link>
           <router-link to="/tablets" class="navbar-item">Tablets</router-link>
@@ -44,6 +44,17 @@
   </div>
 
 </template>
+
+<!-- Allows the hambuger menu to be seen on mobile -->
+<script>
+export default {
+  data() {
+    return {
+      showMobileMenu: false,
+    }
+  }
+}
+</script>
 
 <style lang="scss">
 @import '../node_modules/bulma'
