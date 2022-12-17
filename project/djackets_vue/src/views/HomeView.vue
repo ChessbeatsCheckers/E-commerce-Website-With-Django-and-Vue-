@@ -48,10 +48,12 @@ export default {
   },
   mounted() {
     this.getLatestProducts()
+    document.title = 'Home | SS Tech'
   },
   methods: {
-    getLatestProducts() {
-      axios
+    async getLatestProducts() {
+      this.$store.commit('setIsLoading', true)
+      await axios
         .get('/api/v1/latest-products/')
         .then(response => {
           this.latestProducts = response.data
@@ -59,6 +61,7 @@ export default {
         .catch(error => {
           console.log(error)
         })
+        this.$store.commit('setIsLoading', false)
     }
   }
 }
