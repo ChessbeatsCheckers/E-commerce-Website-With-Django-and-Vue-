@@ -39,7 +39,7 @@ export default {
   },
   mounted() {
     this.getLatestProducts()
-    document.title = 'Home | SS Tech'
+    document.title = 'Home'
   },
   methods: {
     async getLatestProducts() {

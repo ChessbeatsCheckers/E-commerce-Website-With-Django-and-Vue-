@@ -9,7 +9,6 @@ export default createStore({
 		token: "",
 		isLoading: false,
 	},
-	getters: {},
 	mutations: {
 		initializeStore(state) {
 			if (localStorage.getItem("cart")) {
@@ -36,12 +35,23 @@ export default createStore({
 			} else {
 				state.cart.items.push(item);
 			}
-
 			localStorage.setItem("cart", JSON.stringify(state.cart));
-    },
-    setIsLoading(state, status) {
-      state.isLoading = status
-    }
+		},
+		setIsLoading(state, status) {
+			state.isLoading = status;
+		},
+		setToken(state, token) {
+			state.token = token;
+			state.isAuthenticated = true;
+		},
+		removeToken(state) {
+			state.token = "";
+			state.isAuthenticated = false;
+		},
+		clearCart(state) {
+			state.cart = { items: [] };
+			localStorage.setItem("cart", JSON.stringify(state.cart));
+		},
 	},
 	actions: {},
 	modules: {},

@@ -58,6 +58,7 @@ export default {
         }
     },
     mounted() {
+        document.title = 'Cart'
         this.cart = this.$store.state.cart
     },
     methods: {
