@@ -1,7 +1,7 @@
 From python:3.11-slim-buster
 #FROM alpine:3.14
 
-WORKDIR /db
+WORKDIR /app
 
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
