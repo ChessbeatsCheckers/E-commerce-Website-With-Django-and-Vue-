@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-#Test key:
+# Test key:
 STRIPE_SECRET_KEY = 'sk_test_51MGDTUGtqM7BhbuJDI68JX1hXy72dNBwuvBnOVoVtTnCgi9xIwd43rJRqrmN7Txh1KGxyvTLS7KddF2fhgkzjopU00VUIXs0lZ'
 
 # Application definition
@@ -138,4 +138,4 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR /'media/'
+MEDIA_ROOT = BASE_DIR / 'media/'
