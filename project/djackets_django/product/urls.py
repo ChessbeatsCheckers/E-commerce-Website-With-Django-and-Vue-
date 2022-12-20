@@ -1,6 +1,8 @@
 from django.urls import path, include
 from product import views
 
+# Make sure the pages go to the right places
+
 urlpatterns = [
     path('latest-products/', views.LatestProductsList.as_view()),
     path('products/search/', views.search),

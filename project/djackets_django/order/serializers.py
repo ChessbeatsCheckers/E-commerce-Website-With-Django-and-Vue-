@@ -1,8 +1,8 @@
 from rest_framework import serializers
-
 from .models import Order, OrderItem
-
 from product.serializers import ProductSerializer
+
+# Creates an object "order" that is accessed when displaying orders
 
 class MyOrderItemSerializer(serializers.ModelSerializer):    
     product = ProductSerializer()

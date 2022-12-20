@@ -8,6 +8,7 @@ from rest_framework.decorators import api_view
 from .models import Product, Category
 from .serializers import ProductSerializer, CategorySerializer
 
+# What captures the HTTP Call and funnels it in the right direction
 
 class LatestProductsList(APIView):
     def get(self, request, format=None):

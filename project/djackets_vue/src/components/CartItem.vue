@@ -14,6 +14,7 @@
 
 <script>
 export default {
+    // General Cartitem so it populates the cart page
     name: 'CartItem',
     props: {
         initialItem: Object

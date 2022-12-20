@@ -28,6 +28,7 @@
 
 <script>
 export default {
+    //Create each item that appears on the order summary page
     name: 'OrderSummary',
     props: {
         order: Object

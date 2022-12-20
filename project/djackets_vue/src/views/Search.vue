@@ -38,6 +38,7 @@ export default {
         }
     },
     methods: {
+        //Send to Django where it is queried
         async performSearch() {
             this.$store.commit('setIsLoading', true)
             await axios

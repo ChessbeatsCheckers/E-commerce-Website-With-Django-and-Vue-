@@ -41,6 +41,7 @@ export default {
         this.getMyOrders()
     },
     methods: {
+        //Make sure that all the tokens get removed to ensure another user does not access your data
         logout() {
             axios.defaults.headers.common["Authorization"] = ""
             localStorage.removeItem("token")

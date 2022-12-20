@@ -1,4 +1,5 @@
 import { createStore } from "vuex";
+// The main store object
 
 export default createStore({
 	state: {

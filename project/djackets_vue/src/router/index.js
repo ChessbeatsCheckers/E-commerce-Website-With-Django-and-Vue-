@@ -13,6 +13,8 @@ import MyAccount from "../views/MyAccount.vue";
 import Checkout from "../views/Checkout.vue"
 import Success from "../views/Success.vue"
 
+// Router is what allows pages to link to eachother. 
+
 const routes = [
 	{
 		path: "/",

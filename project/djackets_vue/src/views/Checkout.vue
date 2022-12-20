@@ -152,6 +152,7 @@ export default {
             return item.quantity * item.product.price
         },
         submitForm() {
+            // Validation of Data
             this.errors = []
             if (this.first_name === '') {
                 this.errors.push('The first name field is missing!')
@@ -198,6 +199,7 @@ export default {
                 }
                 items.push(obj)
             }
+            //Make the data into a JSON
             const data = {
                 'first_name': this.first_name,
                 'last_name': this.last_name,
@@ -209,6 +211,7 @@ export default {
                 'items': items,
                 'stripe_token': token.id
             }
+            //Send the checkout to stripe
             await axios
                 .post('/api/v1/checkout/', data)
                 .then(response => {

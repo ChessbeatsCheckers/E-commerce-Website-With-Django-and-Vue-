@@ -15,6 +15,7 @@
 
 <script>
 export default {
+    //All the items are using this
     name: 'ProductBox',
     props: {
         product: Object

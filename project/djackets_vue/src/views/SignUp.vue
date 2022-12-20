@@ -62,6 +62,7 @@ export default {
         document.title = 'Sign Up'
     },
     methods: {
+        //Data Validation
         submitForm() {
             this.errors = []
             if (this.username === '') {
@@ -78,6 +79,7 @@ export default {
                     username: this.username,
                     password: this.password
                 }
+                //Send the data to Django to create the User
                 axios
                     .post("/api/v1/users/", formData)
                     .then(response => {
